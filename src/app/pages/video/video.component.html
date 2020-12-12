@@ -1,0 +1,15 @@
+<div *ngIf="loading">
+    <app-loading></app-loading>
+</div>
+
+<div *ngIf="!loading">
+    <div style="text-align: center;" class="animate__animated animate__rubberBand">
+        <youtube-player [videoId]="videoId" suggestedQuality="highres" [height]="alto" [width]="ancho"></youtube-player>
+    </div>
+    <hr>
+
+    <button (click)="goHome()" mat-fab color="primary" style="display: block; margin: auto">
+        <mat-icon>home</mat-icon>
+</button>
+</div>
+<br><br>

@@ -1,0 +1,27 @@
+<div *ngFor="let video of videos">
+    <mat-card class="example-card animate__animated animate__backInUp animate__fast" style="margin-top: 30px;">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image p3">
+                <img class="avatarImg" [src]="video.snippet.thumbnails.medium.url">
+            </div>
+            <mat-card-title>{{video.snippet.title}}</mat-card-title>
+            <mat-card-subtitle>Creador: {{video.snippet.channelTitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image [src]="{{video.thumbnails.high}}"> -->
+        <mat-card-content>
+            <p>
+                <mat-card-subtitle>Descripcion</mat-card-subtitle>{{video.snippet.description}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="botonPlay">
+                <button mat-mini-fab color="primary" (click)="verVideo(video.id.videoId)">
+                    <span class="material-icons">
+                        play_arrow
+                        </span>
+                </button>
+            </div>
+
+        </mat-card-actions>
+    </mat-card>
+</div>
