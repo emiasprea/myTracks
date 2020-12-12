@@ -15,7 +15,7 @@ export class YoutubeService {
 
   constructor( private http: HttpClient ) { }
 
-  private apikey     = 'AIzaSyBS6322aFa_U3BGnq_wxlcUGqX4e0Dh4OQ';
+  private apikey     = '';
   private youtubeUrl = 'https://www.googleapis.com/youtube/v3';
   private snippet    = 'snippet';
   private nextPage   = '';
